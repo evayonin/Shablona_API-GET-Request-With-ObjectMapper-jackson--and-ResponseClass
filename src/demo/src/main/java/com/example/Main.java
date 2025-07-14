@@ -25,7 +25,7 @@ public class Main {
                 request,
                 HttpResponse.BodyHandlers.ofString());
 
-        System.out.println(response.body()); // we have to check if it's an array or
+        // System.out.println(response.body()); // we have to check if it's an array or
         // just object parameters
 
         ObjectMapper mapper = new ObjectMapper(); // של ספריית ג׳קסון
@@ -36,7 +36,7 @@ public class Main {
         System.out.println(rbc); // בדיקת הדפסה (לפי טו סטרינג) של מה שקיבלנו
 
         // עכשיו ניתן לגשת לשדות של המחלקה (עם גטרים) שמהווים את הפרמטרים בשרת ולהשתמש
-        // בהם.
+        // בהם לפע מה שביקשו :
 
         // לדוגמה:
         if (rbc.getParam1() == "Param1-value") {
@@ -49,12 +49,13 @@ public class Main {
         } else {
             System.out.println(joke.setup + "\n" + joke.delivery);// twhopart
         }
-        // פה זה בלי גטרים כי אביה לא יצרה אותם אז היא רק ניגשה לשדות
+        // פה זה בלי גטרים כי אביה לא יצרה אותם אז היא רק ניגשה לשדות (אחרי יצירת
+        // האובייקט על ידי מאפר כרגיל)
 
         // הערה חשובה:
 
         // לפני שאביה יצרה את האובייקט עם האובג׳קט מאפר היא הוסיפה לריסולט (גוף) ששלחה
-        // לו את המחרוזת קטגוריה כדי שיהיה מסוג אחד של קטגוריה(שהיוזר בחר בהתחלה)
+        // לו את המחרוזת קטגוריה כדי שיהיה מסוג אחד של קטגוריה(שהיוזר בחר בהתחלה):
         // String result = getJokeByUrl("https://v2.jokeapi.dev/joke/" + joke.category);
 
     }

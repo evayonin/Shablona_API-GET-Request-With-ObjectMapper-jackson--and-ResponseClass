@@ -8,6 +8,7 @@ public class ResponseBodyClass {
   private String param1;
   private String param2;
   private String param3;
+  // כולם מחרוזות לפי הפרמטרים במבנה גייסון!
 
   public String getParam1() {
     return param1;
